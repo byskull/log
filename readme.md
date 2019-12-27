@@ -17,9 +17,11 @@ python 에서 간단하게 log 보여주기
 #### getattr으로 값을 불러온 후 , 함수의 경우 callable 여부를 살펴보면 함수인지 변수인지 알 수 있습니다
 #### 그러면 변수명과 변수 내용을 출력하면 됩니다.
 
+```python
 def log(s):    
     print "Class Name : " + s.__class__.__name__
     for i in dir(s) :
         tmp = getattr( s, i )
         if tmp != None and not callable(tmp) and  __name__ != tmp :
-            print i, tmp
+            print i, tmp			
+```
